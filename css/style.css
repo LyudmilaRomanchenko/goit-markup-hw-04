@@ -15,8 +15,9 @@
   --primary-white-color: #ffffff;
   --logo-black-color: #000000;
   --adress-white-color: rgba(f, f, f, 0.6);
-  --background-team-color: #f5f4fa;
+  --background-gray-color: #f5f4fa;
   --background-dark-color: #2f303a;
+  --icon-color: #afb1b8;
   --elements-gap: 30px;
 }
 
@@ -148,8 +149,41 @@ img {
 
   /*outline: 2px solid rgb(4, 83, 107);*/
 }
-.nav-list-item:not(:last-child),
+
+.contacts {
+  display: flex;
+  align-items: center;
+}
+
+.our-contacts-icon {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
+
+.envelope {
+  width: 16px;
+  height: 12px;
+}
+
+.smartphone {
+  width: 10px;
+  height: 16px;
+}
+
+.contacts:hover > .our-contacts-icon,
+.contacts:focus > .our-contacts-icon {
+  fill: var(--accent-color);
+}
+/*.our-contacts-icon:hover,
+.our-contacts-icon:focus {
+  fill: var(--accent-color);
+}*/
+
 .our-contacts-item:not(:last-child) {
+  margin-right: var(--elements-gap);
+}
+
+.nav-list-item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -160,7 +194,17 @@ img {
 .hero-container {
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/main/bcg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
+  margin: 0 auto;
 }
+
 .hero-title {
   font-weight: 900;
   font-size: 44px;
@@ -243,6 +287,18 @@ img {
   /*outline: 2px solid rgb(4, 37, 99);*/
 }
 
+.advantages-img {
+  padding: 25px 100px;
+
+  background-color: var(--background-gray-color);
+  border-radius: 4px;
+}
+
+.advantages-icon {
+  width: 70px;
+  height: 70px;
+}
+
 .advantages-title {
   font-weight: 700;
   font-size: 14px;
@@ -250,6 +306,8 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-text-color);
+
+  margin-top: var(--elements-gap);
 }
 .advantages-descript {
   margin-top: 10px;
@@ -275,7 +333,7 @@ img {
 }
 /*=============================== TEAM ====================================*/
 .team {
-  background-color: var(--background-team-color);
+  background-color: var(--background-gray-color);
 }
 
 .team-list {
@@ -327,23 +385,39 @@ img {
   padding-right: 32px;
   /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
-  outline: 2px solid rgb(230, 24, 92);
+  /*outline: 2px solid rgb(230, 24, 92);*/
 }
 .team-social-item {
-  /*для наглядности!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-  width: 45px;
-  height: 45px;
-  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
   margin-left: 10px;
   flex-basis: calc(100% / 4 - 10px);
 
-  outline: 2px solid rgb(62, 24, 230);
+  /*outline: 2px solid rgb(62, 24, 230);*/
 }
-.team-social-item:hover,
+/*.team-social-item:hover,
 .team-social-item:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
+}*/
+.team-social-link {
+  display: flex;
+  align-items: center;
+}
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.team-social-icon {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  fill: var(--icon-color);
+}
+
+.team-social-icon:hover,
+.team-social-icon:focus {
+  fill: var(--primary-white-color);
 }
 
 /*.team-member-img {
@@ -352,36 +426,81 @@ img {
 /*================================== CLIENTS ====================================*/
 
 .clients {
-  outline: 2px solid rgb(230, 24, 92);
+  /*outline: 2px solid rgb(230, 24, 92);*/
 }
 .clients-container {
-  outline: 2px solid rgb(33, 231, 33);
+  /*outline: 2px solid rgb(33, 231, 33);*/
 }
 .clients-list {
   display: flex;
   margin-top: 50px;
   margin-left: calc(-1 * var(--elements-gap));
 
-  outline: 2px solid rgb(86, 33, 231);
+  /*outline: 2px solid rgb(86, 33, 231);*/
 }
 .clients-item {
   margin-left: var(--elements-gap);
   flex-basis: calc(100% / 6 - var(--elements-gap));
 
-  /*падинги задала примерно для предварительной наглядности !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-  padding: 24px 65px;
-
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-
-  outline: 2px solid rgb(231, 33, 66);
+  /*outline: 2px solid rgb(231, 33, 66);*/
 }
-.clients-item:hover,
-.clients-item:focus {
+
+.clients-link {
+  display: flex;
+  /*align-items: center;*/
+
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
   border: 1px solid var(--accent-color);
 }
-.clients-link {
-  outline: 2px solid rgb(86, 33, 231);
+
+.clients-icon {
+  fill: var(--icon-color);
+}
+
+.clients-icon:hover,
+.clients-icon:focus {
+  fill: var(--accent-color);
+}
+
+.logo1 {
+  width: 170px;
+  height: 90px;
+  padding: 20px 63px;
+}
+
+.logo2 {
+  width: 170px;
+  height: 90px;
+  padding: 19px 65px;
+}
+
+.logo3 {
+  width: 170px;
+  height: 90px;
+  padding: 24px 65px;
+}
+
+.logo4 {
+  width: 170px;
+  height: 90px;
+  padding: 24px 45px;
+}
+
+.logo5 {
+  width: 170px;
+  height: 90px;
+  padding: 22px 55px;
+}
+
+.logo6 {
+  width: 170px;
+  height: 90px;
+  padding: 22px 41px;
 }
 /*====================================== FOOTER ======================*/
 .footer {
@@ -389,13 +508,13 @@ img {
 }
 .footer-container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   padding: 60px 15px;
 
-  outline: 2px solid rgb(231, 33, 66);
+  /*outline: 2px solid rgb(231, 33, 66)*/
 }
 .footer-container-left {
-  outline: 2px solid rgb(231, 33, 66);
+  /*outline: 2px solid rgb(231, 33, 66);*/
 }
 
 .address {
@@ -414,7 +533,7 @@ img {
 .footer-container-right {
   margin-left: 70px;
 
-  outline: 2px solid rgb(231, 33, 66);
+  /*outline: 2px solid rgb(231, 33, 66);*/
 }
 .join {
   font-weight: 700;
@@ -428,25 +547,32 @@ img {
   display: flex;
   margin-top: 20px;
 
-  outline: 2px solid rgb(231, 33, 66);
+  /*outline: 2px solid rgb(231, 33, 66);*/
 }
 
-.social-item {
-  /*для наглядности!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-  width: 45px;
-  height: 45px;
-  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-
-  outline: 2px solid rgb(125, 33, 231);
-}
 .social-item:not(:last-child) {
   margin-right: 10px;
 }
-.social-item:hover,
-.social-item:focus {
+
+.social-link {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  /*outline: 2px solid rgb(125, 33, 231);*/
+}
+
+.social-link:hover,
+.social-link:focus {
   background-color: var(--accent-color);
+}
+
+.social-icon {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+
+  fill: var(--primary-white-color);
 }
 /*================================ PORTFOLIO PAGE =====================================  */
 
