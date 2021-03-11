@@ -129,7 +129,7 @@ img {
   padding-top: 25px;
   padding-bottom: 25px;
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
 }
 .nav {
   display: flex;
@@ -146,6 +146,7 @@ img {
 .our-contacts {
   display: flex;
   align-items: center;
+  margin-left: auto;
 
   /*outline: 2px solid rgb(4, 83, 107);*/
 }
@@ -188,9 +189,9 @@ img {
 }
 
 /*================================== HERO ==============================*/
-.hero {
+/*.hero {
   background-color: var(--background-dark-color);
-}
+}*/
 .hero-container {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -357,6 +358,8 @@ img {
 .team-member-container {
   padding-top: var(--elements-gap);
   padding-bottom: var(--elements-gap);
+  padding-left: 32px;
+  padding-right: 32px;
 }
 .team-member-name {
   font-weight: 500;
@@ -378,21 +381,19 @@ img {
 .team-social-list {
   display: flex;
   margin-top: 16px;
-  margin-left: -10px;
-
-  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! не уверена, что именно падинги*/
-  padding-left: 32px;
-  padding-right: 32px;
-  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
   /*outline: 2px solid rgb(230, 24, 92);*/
 }
 .team-social-item {
-  margin-left: 10px;
   flex-basis: calc(100% / 4 - 10px);
 
   /*outline: 2px solid rgb(62, 24, 230);*/
 }
+
+.team-social-item:not(:first-child) {
+  margin-left: 10px;
+}
+
 /*.team-social-item:hover,
 .team-social-item:focus {
   background-color: var(--accent-color);
@@ -434,20 +435,26 @@ img {
 .clients-list {
   display: flex;
   margin-top: 50px;
-  margin-left: calc(-1 * var(--elements-gap));
 
   /*outline: 2px solid rgb(86, 33, 231);*/
 }
+
 .clients-item {
-  margin-left: var(--elements-gap);
+  /*display: flex;*/
   flex-basis: calc(100% / 6 - var(--elements-gap));
 
   /*outline: 2px solid rgb(231, 33, 66);*/
 }
 
+.clients-item:not(:first-child) {
+  margin-left: var(--elements-gap);
+}
+
 .clients-link {
   display: flex;
-  /*align-items: center;*/
+  align-items: center;
+  /*padding: 20px 63px;
+  height: 90px;*/
 
   border: 1px solid var(--icon-color);
   border-radius: 4px;
@@ -459,21 +466,28 @@ img {
 }
 
 .clients-icon {
+  display: flex;
+  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  width: 44px;
+  height: 50px;
+  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
   fill: var(--icon-color);
 }
 
-.clients-icon:hover,
-.clients-icon:focus {
+.clients-link:hover > .clients-icon,
+.clients-link:focus > .clients-icon {
   fill: var(--accent-color);
 }
 
-.logo1 {
-  width: 170px;
-  height: 90px;
-  padding: 20px 63px;
+/*.logo1 {
+  width: 44px;
+  height: 50px;
+  /*align-items: center;*/
+/*padding: 20px 63px;
 }
 
-.logo2 {
+/*.logo2 {
   width: 170px;
   height: 90px;
   padding: 19px 65px;
@@ -501,7 +515,7 @@ img {
   width: 170px;
   height: 90px;
   padding: 22px 41px;
-}
+}*/
 /*====================================== FOOTER ======================*/
 .footer {
   background-color: var(--background-dark-color);
